@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/compra.css">
+    <link rel="stylesheet" href="./css/pagar.css">
+	<script src="./js/usuarios.js"defer></script>
+	<script src="./js/carrito.js" defer></script>
+	<script src="./js/pagar.js" defer></script>
+
+
+  
+
+	<title>Bicicletas puntoJson</title>
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<li > <a  class="bi bi-house" class="inicio" href="index.html">inicio</a></li>
+		   <li><a class="fecha" href="">fecha</a></li>
+		   <li><a   class="bi bi-cart"class="carrito" href="pagar.html"></a><span id="cuenta-carrito">0</span></a></li>
+	   
+			
+		</nav>
+	   
+	 </header>
+	
+	<main>
+		<section id="productos-container">
+		</section>
+		<h3  class="Usuario" id="documento"><script>let documentousuario = prompt("Ingrese su numero de documento")
+		   let documento = document.querySelector("#documento")
+		   documento.innerHTML = `Usuario:${documentousuario}`;
+		</script></h3>
+        <p id="carrito-vacio">Ups! El carrito está vacío, <a href="./index.html">elige algunos productos</a></p>
+		<section id="cart-container">
+		</section>
+  <section id="totales">
+    <p>Total unidades: <span id="cantidad">0</span></p>
+    <p>Total precio: $<span id="precio">0</span></p>
+    <button disabled>Comprar</button>
+    <button id="reiniciar">Reiniciar</button>
+  </section>
+	
+	</main>
+	
+</body>
+</html>
